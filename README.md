@@ -119,7 +119,7 @@ No local key stores, no `cipher-text.properties`, no local decryption. The exter
 
 ## Available Customisation Points
 
-The WSO2 secure vault framework offers **three main extension points** for integrating a custom key vault. Each serves a different purpose:
+The WSO2 secure vault framework offers **two main extension points** for integrating a custom key vault. Each serves a different purpose:
 
 ### 1. SecretCallbackHandler (This Project)
 
