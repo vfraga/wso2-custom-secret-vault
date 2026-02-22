@@ -174,8 +174,6 @@ You would use this extension point if you want to, for example, store encrypted 
 
 ---
 
----
-
 ### Summary Table
 
 | Extension Point           | Complexity | Requires Key Stores? | Best For                                              |
