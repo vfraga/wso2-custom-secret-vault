@@ -162,6 +162,7 @@ By **not configuring key stores** and setting `carbon.secretProvider` to our han
 | **Methods to implement** | `init(Properties, String)`, `getSecret(String)`, `getEncryptedData(String)`, `setParent(SecretRepository)`, `getParent()` (on `SecretRepository`); `getSecretRepository(IdentityKeyStoreWrapper, TrustKeyStoreWrapper)` (on `SecretRepositoryProvider`) |
 | **When to use**          | When you want to **replace where encrypted secrets are stored** while keeping the standard `SecretManager` initialisation flow (key stores, cipher decryption).                                                                                         |
 | **Configuration**        | Set `secretRepositories.vault.provider` in `secret-manager.properties` to your provider's FQCN.                                                                                                                                                         |
+
 The default implementation is `FileBaseSecretRepository` + `FileBaseSecretRepositoryProvider`. This reads `cipher-text.properties` and decrypts each entry using the identity key store.
 
 You would use this extension point if you want to, for example, store encrypted ciphertexts in a database instead of a file, but still use WSO2's local key stores for decryption.
