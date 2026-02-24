@@ -73,7 +73,7 @@ When the Carbon kernel starts, the `SecretManagerInitializerComponent` (an OSGi 
 When a Carbon component (data source, user store, etc.) needs a secret:
 
 1. It looks up the `SecretCallbackHandlerService` from the OSGi registry.
-2. Creates a `[SingleSecretCallback](https://github.com/wso2/carbon-secvault/blob/v1.1.3/src/main/java/org/wso2/securevault/secret/SingleSecretCallback.java)("alias.name")`.
+2. Creates a [`SingleSecretCallback`](https://github.com/wso2/carbon-secvault/blob/v1.1.3/src/main/java/org/wso2/securevault/secret/SingleSecretCallback.java)("alias.name").
 3. Calls `handler.handle(new SecretCallback[]{ callback })`.
 4. Reads the resolved secret from `callback.getSecret()`.
 
